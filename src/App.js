@@ -22,10 +22,10 @@ function App() {
       <p>Input test:</p>
       <input
         type="text"
-        // onKeyDown={(event) => {
-        //   event.preventDefault();
-        //   alert('input clicked')
-        // }}
+        onKeyDown={(event) => {
+          event.preventDefault();
+          alert('input clicked')
+        }}
       /> 
     </div>
   );
