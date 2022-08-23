@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 function App() {
   const [textInput, setTextInput] = useState('');
   const [showKeyboard, setShowKeyboard] = useState(false);
-  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+  const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
   useEffect(() => {
     if (textInput.length > 0) {
@@ -40,7 +40,8 @@ function App() {
         </p>
         <div>
           Demo of a possible custom virtual keyboard that prevents the default keyboard from appearing when an input is clicked.<br/>
-          Hides when there are no characters.
+          Hides when there are no characters.<br/>
+          For use with a touch screen device.
         </div>
         
       </header>
@@ -58,7 +59,17 @@ function App() {
 
       <div style={{marginTop: '25px'}}>
         <p>Custom keyboard:</p>  
-        <div id="keyboardWrapper" style={{display: showKeyboard ? 'flex' : 'none', alignItems: 'center', justifyContent: 'center', border: '1px solid'}}>
+        <div 
+          id="keyboardWrapper" 
+          style={{
+            display: showKeyboard ? 'flex' : 'none', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            border: '1px solid',
+            flexWrap: 'wrap',
+            width: '50%',
+            margin: 'auto'
+          }}>
           
           {renderKeyboard()}
           
